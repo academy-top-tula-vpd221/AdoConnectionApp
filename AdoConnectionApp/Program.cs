@@ -74,8 +74,8 @@ using (SqlConnection connection = new SqlConnection(connectionString))
             while (await reader.ReadAsync())
             {
                 //for (int i = 0; i < reader.FieldCount; i++)
-                //    Console.Write($"\t{reader.GetValue(i)}");
-                //Console.Write($"\t{reader[i]}");
+                    //Console.Write($"\t{reader.GetValue(i)}");
+                    //Console.Write($"\t{reader[i]}");
                 //Console.Write($"\t{reader["first_name"]}\t{reader["last_name"]}");
                 Console.Write($"\t{reader.GetInt32(0)}\t{reader.GetString(1)}{((reader.GetString(1).Length < 8) ? "\t" : "")}\t{reader.GetString(2)}{((reader.GetString(2).Length < 8) ? "\t" : "")}\t{reader.GetDateTime(3).ToLongDateString()}");
                 Console.WriteLine();
